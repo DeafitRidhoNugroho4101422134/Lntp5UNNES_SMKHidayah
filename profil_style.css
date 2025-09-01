@@ -1,0 +1,200 @@
+/* ===========================
+   Global Styles & Variables
+=========================== */
+:root {
+  --primary-color: #6a9a7a;
+  --secondary-color: #5a8a6a;
+  --background-color: #f8f9fa;
+  --font-color: #333;
+  --white-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===========================
+   Header Section
+=========================== */
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 0 0 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   Team Grid Layout
+=========================== */
+.team-grid {
+  display: grid;
+  /* Membuat kolom responsif secara otomatis */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* ===========================
+   Flip Card Styling
+=========================== */
+.team-card {
+  width: 100%; /* Lebar kartu akan menyesuaikan grid */
+  max-width: 280px;
+  height: 400px;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+.team-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.team-card:hover .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+.team-card-front,
+.team-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  border: 1px solid #eee;
+}
+
+.team-card-front {
+  background-color: #ddd; /* Fallback color */
+}
+
+.team-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-card-front img {
+  transform: scale(1.1);
+}
+
+.team-card-back {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--white-color);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.team-card-back h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.team-card-back .role {
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 8px;
+  display: inline-block;
+}
+
+.team-card-back .quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.95;
+  margin: 0 0 20px;
+}
+
+.team-card-back .motivation {
+  font-size: 0.85rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Responsive (Mobile)
+=========================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .team-grid {
+    gap: 25px;
+  }
+  .team-card {
+    height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 15px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .team-grid {
+    /* Untuk layar sangat kecil, minmax diatur agar kartu lebih besar */
+    grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
+  }
+  .team-card {
+    height: 420px;
+  }
+}

@@ -1,0 +1,394 @@
+/* --- PALET WARNA BARU --- */
+:root {
+  --primary-color: #6a9a7a; /* Hijau keabu-abuan utama */
+  --secondary-color: #8cbaa5; /* Hijau lebih muda */
+  --accent-color: #4caf50; /* Hijau cerah untuk highlight */
+  --text-color: #333d29; /* Teks gelap, hampir hitam */
+  --light-text-color: #667061; /* Teks abu-abu lebih terang */
+  --background-light: #f9fdf9; /* Latar belakang sangat terang */
+  --background-medium: #eef2ed; /* Latar belakang abu-abu kehijauan */
+  --border-color: #d8e0d4; /* Warna border halus */
+  --white: #ffffff;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(106, 154, 122, 0.3); /* Bayangan dengan warna primer */
+}
+
+/* --- PENGATURAN DASAR & HALAMAN UTAMA --- */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-medium);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto; /* Margin auto untuk centering horizontal */
+  text-align: center;
+  background-color: var(
+    --background-light
+  ); /* Latar belakang kontainer utama */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  padding: 40px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--light-text-color);
+  line-height: 1.6;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Ukuran kartu sedikit lebih besar */
+  gap: 30px; /* Jarak antar kartu */
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--shadow-light);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px; /* Tinggi kartu */
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02); /* Efek melayang lebih terasa */
+  box-shadow: 0 12px 35px var(--shadow-hover);
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--light-text-color); /* Warna teks default */
+}
+
+.card:hover p {
+  color: var(--background-light); /* Warna teks putih saat hover */
+}
+
+footer {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-color);
+  color: var(--light-text-color);
+  font-size: 0.9rem;
+}
+
+/* --- STYLE UNTUK HALAMAN MATA PELAJARAN --- */
+.page-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: var(--light-text-color);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: var(--light-text-color);
+  font-weight: 600;
+}
+
+#page-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+#page-subtitle {
+  text-align: center;
+  color: var(--light-text-color);
+  font-size: 1rem;
+}
+
+.pilihan-kelas-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  min-height: 450px; /* Tingkatkan tinggi minimum */
+  align-items: flex-start; /* Biar kelas X, XI, XII tetap di atas */
+}
+
+.kartu-kelas {
+  background-color: var(--white);
+  border-radius: 18px; /* Lebih bulat */
+  box-shadow: 0 6px 25px var(--shadow-light);
+  width: 300px; /* Lebar kartu */
+  min-height: 280px; /* Tinggi kartu */
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; /* Transisi lebih halus */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.kartu-kelas:not(.aktif):hover {
+  transform: translateY(-15px) scale(1.03); /* Efek hover lebih dramatis */
+  box-shadow: 0 15px 40px var(--shadow-hover);
+  border-color: var(--primary-color); /* Border berubah warna saat hover */
+}
+
+.info-kelas {
+  transition: all 0.5s ease;
+  padding-bottom: 20px; /* Sedikit padding bawah */
+}
+
+.info-kelas h2 {
+  font-size: 3.5rem; /* Ukuran angka lebih besar */
+  margin: 0 0 10px 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.info-kelas p {
+  margin: 0;
+  color: var(--light-text-color);
+  font-size: 1rem;
+}
+
+/* Saat kartu kelas aktif */
+.kartu-kelas.aktif {
+  cursor: default;
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-90px); /* Geser ke atas lebih tinggi */
+  box-shadow: 0 15px 40px var(--shadow-hover);
+  min-height: 400px; /* Tinggi kartu aktif */
+}
+
+.kartu-kelas.aktif .info-kelas {
+  transform: translateY(-120px); /* Geser info kelas lebih jauh ke atas */
+  padding-bottom: 0;
+  pointer-events: none; /* Nonaktifkan interaksi di info kelas */
+}
+.kartu-kelas.aktif .info-kelas h2,
+.kartu-kelas.aktif .info-kelas p {
+  color: var(--white);
+}
+
+/* Kartu yang tidak aktif saat ada yang aktif */
+.kartu-kelas.non-aktif {
+  opacity: 0;
+  transform: scale(0.8); /* Mengecil lebih jauh */
+  pointer-events: none;
+  transition: all 0.4s ease-out; /* Transisi saat menghilang */
+}
+
+.sub-judul {
+  margin: 0 0 15px 0;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* --- KONTEN DINAMIS DALAM KARTU (DAFTAR MATERI & PILIHAN KONTEN) --- */
+.daftar-materi,
+.pilihan-konten {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 55%; /* Posisikan lebih ke tengah */
+  left: 25px;
+  right: 25px;
+  transform: translateY(70px); /* Mulai dari bawah */
+  transition: all 0.5s ease; /* Transisi lebih halus */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Jarak antar item */
+}
+
+.item-materi {
+  display: block;
+  background-color: var(--secondary-color); /* Warna yang serasi */
+  color: var(--white);
+  padding: 12px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan kecil */
+}
+
+.item-materi:hover {
+  background-color: var(--accent-color); /* Aksen cerah saat hover */
+  transform: translateX(8px) scale(1.02); /* Sedikit bergeser dan membesar */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tombol-konten {
+  display: block;
+  background-color: var(--background-light); /* Warna yang lebih netral */
+  color: var(--primary-color);
+  padding: 14px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tombol-konten:hover {
+  background-color: var(--white);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: var(--accent-color); /* Aksen warna saat hover */
+}
+
+.tombol-kembali-topik {
+  margin-top: 15px;
+  color: var(--background-light); /* Warna kontras agar terlihat */
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.tombol-kembali-topik:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+/* KELAS BANTU UNTUK ANIMASI */
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) !important; /* Posisikan ke tengah */
+  transition-delay: 0.4s !important; /* Delay lebih lama */
+}
+
+.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-70px) !important; /* Sembunyikan ke bawah */
+  transition: all 0.3s ease !important;
+  transition-delay: 0s !important;
+}
+
+/* TOMBOL KEMBALI UTAMA */
+#tombol-kembali {
+  margin-top: 40px; /* Margin lebih besar */
+  padding: 15px 30px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--light-text-color); /* Warna abu-abu serasi */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#tombol-kembali:hover {
+  background-color: #555d51; /* Warna abu-abu lebih gelap */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#tombol-kembali.hidden {
+  display: none;
+}
+
+/* --- Gaya untuk Tombol Profile Team --- */
+.profile-team-section {
+  text-align: center;
+  margin-bottom: 50px; /* Memberi jarak ke judul di bawahnya */
+  margin-top: -15px; /* Sedikit menarik ke atas agar lebih dekat dengan deskripsi header */
+}
+
+.profile-btn {
+  display: inline-block; /* Penting agar padding, margin, dll berfungsi */
+  padding: 14px 35px; /* Atas-bawah 14px, Kiri-kanan 35px */
+  background-color: var(
+    --primary-color
+  ); /* Menggunakan warna primer dari tema */
+  color: var(--white);
+  border-radius: 50px; /* Ini yang membuatnya berbentuk seperti pil */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px; /* Jarak antar huruf agar lebih rapi */
+  box-shadow: 0 5px 20px rgba(106, 154, 122, 0.4); /* Bayangan lembut yang serasi */
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent; /* Border transparan untuk transisi yang mulus */
+}
+
+.profile-btn:hover {
+  background-color: #5a8a6a; /* Warna primer sedikit lebih gelap saat disentuh */
+  transform: translateY(-5px) scale(1.05); /* Efek melayang ke atas dan sedikit membesar */
+  box-shadow: 0 8px 25px var(--shadow-hover); /* Bayangan menjadi lebih kuat */
+}

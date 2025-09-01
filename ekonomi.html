@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akuntansi - Portal Pembelajaran</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-subject="Akuntansi">
+    <div class="container">
+      <header class="page-header">
+        <nav class="breadcrumb">
+          <a href="index.html">Halaman Utama</a> &gt; <span>Akuntansi</span>
+        </nav>
+        <h1 id="page-title">Pilih Tingkat Kelas</h1>
+        <p id="page-subtitle">
+          Klik pada salah satu kelas untuk memilih topik materi.
+        </p>
+      </header>
+
+      <main>
+        <div id="selection-container" class="pilihan-kelas-container">
+          <div class="kartu-kelas" data-kelas="X">
+            <div class="info-kelas">
+              <h2>Kelas X</h2>
+              <p>Pengantar ekonomi dan perbankan</p>
+            </div>
+            <div class="daftar-materi">
+              <h4 class="sub-judul">Pilih Topik Materi</h4>
+              <a href="#" class="item-materi" data-topic="pda"
+                >Pengantar Ekonomi</a
+              >
+              <a href="#" class="item-materi" data-topic="jurnal">Perbankan</a>
+              <!-- <a href="#" class="item-materi" data-topic="buku-besar"
+                >Buku Besar & Neraca Saldo</a
+              > -->
+            </div>
+            <div class="pilihan-konten" data-topic-content="pda">
+              <h4 class="sub-judul">Pengantar Ekonomi</h4>
+              <a
+                href="https://drive.google.com/file/d/1RfkkO82cNmSLb-8bdEmxzimzg5oCLgum/view?usp=sharing"
+                class="tombol-konten"
+                >Materi</a
+              >
+              <a
+                href="https://drive.google.com/file/d/1UFoejmngCwMvL9FJhkFPBkCPwHAjRUrC/view?usp=sharing"
+                class="tombol-konten"
+                >Modul</a
+              >
+              <!-- <a href="akt-x-pda-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              > -->
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+            <div class="pilihan-konten" data-topic-content="jurnal">
+              <h4 class="sub-judul">Perbankan</h4>
+              <a
+                href="https://drive.google.com/file/d/1vg3YUuPzoHbn_FECM4WYSC7UMWZZSeIo/view?usp=sharing"
+                class="tombol-konten"
+                >Modul Bab 1 Sejarah Perbankan</a
+              >
+              <a
+                href="https://drive.google.com/file/d/1voM8-ztCZpIzSho7kvR_tjVptt6YJhXd/view?usp=sharing"
+                class="tombol-konten"
+                >Modul Bab 2</a
+              >
+              <!-- <a href="akt-x-jurnal-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              > -->
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+            <div class="pilihan-konten" data-topic-content="buku-besar">
+              <h4 class="sub-judul">Buku Besar & Neraca Saldo</h4>
+              <a href="akt-x-bb-materi.html" class="tombol-konten">Materi</a>
+              <a href="akt-x-bb-modul.html" class="tombol-konten">Modul</a>
+              <a href="akt-x-bb-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              >
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+          </div>
+
+          <div class="kartu-kelas" data-kelas="XI">
+            <div class="info-kelas">
+              <h2>Kelas XI</h2>
+              <p>Konsep dasar perpajakan</p>
+            </div>
+            <div class="daftar-materi">
+              <h4 class="sub-judul">Pilih Topik Materi</h4>
+              <a href="#" class="item-materi" data-topic="jasa"
+                >Konsep Dasar Perpajakan</a
+              >
+              <a href="#" class="item-materi" data-topic="dagang"
+                >Konsentrasi Perpajakan</a
+              >
+              <!-- <a href="#" class="item-materi" data-topic="penyesuaian"
+                >Jurnal Penyesuaian</a
+              > -->
+            </div>
+            <div class="pilihan-konten" data-topic-content="jasa">
+              <h4 class="sub-judul">Perpajakan</h4>
+              <!-- <a href="akt-xi-jasa-materi.html" class="tombol-konten">Materi</a> -->
+              <a
+                href="https://drive.google.com/file/d/17sqYKjY8NegB3Sk5qQamkpxwIlRrrAf7/view?usp=sharing"
+                class="tombol-konten"
+                >Materi</a
+              >
+              <!-- <a href="akt-xi-jasa-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              > -->
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+            <div class="pilihan-konten" data-topic-content="dagang">
+              <h4 class="sub-judul">Konsentrasi Keahlian</h4>
+              <!-- <a href="akt-xi-dagang-materi.html" class="tombol-konten"
+                >Materi</a
+              > -->
+              <a
+                href="https://drive.google.com/file/d/1RcQF2D7ok6jQvDpoBGhIGTpuu1XTzl_t/view?usp=sharing"
+                class="tombol-konten"
+                >Modul</a
+              >
+              <!-- <a href="akt-xi-dagang-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              > -->
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+            <div class="pilihan-konten" data-topic-content="penyesuaian">
+              <h4 class="sub-judul">Jurnal Penyesuaian</h4>
+              <a href="akt-xi-jp-materi.html" class="tombol-konten">Materi</a>
+              <a href="akt-xi-jp-modul.html" class="tombol-konten">Modul</a>
+              <a href="akt-xi-jp-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              >
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+          </div>
+
+          <div class="kartu-kelas" data-kelas="XII">
+            <div class="info-kelas">
+              <h2>Kelas XII</h2>
+              <p>Laporan & Analisis</p>
+            </div>
+            <div class="daftar-materi">
+              <h4 class="sub-judul">Pilih Topik Materi</h4>
+              <a href="#" class="item-materi" data-topic="laporan"
+                >Coming Soon</a
+              >
+              <!-- <a href="#" class="item-materi" data-topic="manufaktur"
+                >Akuntansi Manufaktur</a
+              >
+              <a href="#" class="item-materi" data-topic="komputer"
+                >Komputer Akuntansi (MYOB)</a
+              > -->
+            </div>
+            <div class="pilihan-konten" data-topic-content="laporan">
+              <h4 class="sub-judul">Coming Soon</h4>
+              <!-- <a href="akt-xii-laporan-materi.html" class="tombol-konten"
+                >Materi</a
+              >
+              <a href="akt-xii-laporan-modul.html" class="tombol-konten"
+                >Modul</a
+              >
+              <a href="akt-xii-laporan-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              > -->
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+            <div class="pilihan-konten" data-topic-content="manufaktur">
+              <h4 class="sub-judul">Akuntansi Manufaktur</h4>
+              <a href="akt-xii-manufaktur-materi.html" class="tombol-konten"
+                >Materi</a
+              >
+              <a href="akt-xii-manufaktur-modul.html" class="tombol-konten"
+                >Modul</a
+              >
+              <a href="akt-xii-manufaktur-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              >
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+            <div class="pilihan-konten" data-topic-content="komputer">
+              <h4 class="sub-judul">Komputer Akuntansi (MYOB)</h4>
+              <a href="akt-xii-myob-materi.html" class="tombol-konten"
+                >Materi</a
+              >
+              <a href="akt-xii-myob-modul.html" class="tombol-konten">Modul</a>
+              <a href="akt-xii-myob-latihan.html" class="tombol-konten"
+                >Latihan Soal</a
+              >
+              <a href="#" class="tombol-kembali-topik">← Pilih Topik Lain</a>
+            </div>
+          </div>
+        </div>
+        <button id="tombol-kembali" class="hidden">Pilih Kelas Lain</button>
+      </main>
+      <footer>
+        <p>
+          &copy; 2025 | Dibuat oleh Mahasiswa LANTIP Universitas Negeri Semarang
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

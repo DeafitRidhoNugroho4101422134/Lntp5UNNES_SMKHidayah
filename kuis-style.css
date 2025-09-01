@@ -1,0 +1,89 @@
+/* style.css (gaya utama) tetap digunakan, ini hanya tambahan */
+
+.question-block {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.question-block:last-child {
+  border-bottom: none;
+}
+
+.question-block p {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options label {
+  display: block;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.options label:hover {
+  background-color: #f0f8ff;
+  border-color: #4a90e2;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Gaya untuk hasil kuis */
+#hasilKuis {
+  border-top: 5px solid var(--primary-color);
+}
+
+.result-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.result-item.correct {
+  background-color: #d4edda;
+  border-left: 5px solid #28a745;
+}
+
+.result-item.incorrect {
+  background-color: #f8d7da;
+  border-left: 5px solid #dc3545;
+}
+
+.solution {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.nav-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #5a6268;
+}

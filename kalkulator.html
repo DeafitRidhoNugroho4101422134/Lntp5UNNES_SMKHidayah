@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Pembelajaran Eksponen Interaktif</title>
+    <link rel="stylesheet" href="stylem.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Mari Belajar Eksponen!</h1>
+        <p>
+          Pahami konsep bilangan berpangkat dengan penjelasan dan kalkulator
+          interaktif.
+        </p>
+      </header>
+
+      <div class="card">
+        <h2>Definisi Eksponen</h2>
+        <p>
+          <strong>Secara Umum:</strong> Eksponen (bilangan berpangkat) adalah
+          cara singkat untuk menulis <strong>perkalian berulang</strong> dari
+          sebuah bilangan. Misalnya, daripada menulis 5 x 5 x 5, kita bisa
+          menyingkatnya menjadi 5<sup>3</sup>.
+        </p>
+        <p>
+          <strong>Secara Matematis:</strong> Ditulis sebagai
+          <strong>a<sup>n</sup></strong
+          >, di mana 'a' adalah <strong>basis</strong> (bilangan yang dikalikan)
+          dan 'n' adalah <strong>eksponen</strong> (berapa kali bilangan itu
+          dikalikan).
+        </p>
+        <div class="formula-box">
+          a<sup>n</sup> = a × a × a × ... × a (sebanyak n kali)
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sifat 1: Perkalian</h3>
+        <p class="formula-display">
+          a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup>
+        </p>
+        <p>Jika basisnya sama, cukup <strong>jumlahkan</strong> pangkatnya.</p>
+        <div class="calculator">
+          <h4>Kalkulator Interaktif</h4>
+          <div class="input-group">
+            <label
+              >Basis (a): <input type="number" id="kali_basis" value="2"
+            /></label>
+            <label
+              >Pangkat (m): <input type="number" id="kali_m" value="3"
+            /></label>
+            <label
+              >Pangkat (n): <input type="number" id="kali_n" value="4"
+            /></label>
+          </div>
+          <button onclick="hitungPerkalian()">Hitung</button>
+          <div class="output" id="output_kali">Hasil akan tampil di sini.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sifat 2: Pembagian</h3>
+        <p class="formula-display">
+          a<sup>m</sup> / a<sup>n</sup> = a<sup>m-n</sup>
+        </p>
+        <p>Jika basisnya sama, cukup <strong>kurangkan</strong> pangkatnya.</p>
+        <div class="calculator">
+          <h4>Kalkulator Interaktif</h4>
+          <div class="input-group">
+            <label
+              >Basis (a): <input type="number" id="bagi_basis" value="3"
+            /></label>
+            <label
+              >Pangkat (m): <input type="number" id="bagi_m" value="5"
+            /></label>
+            <label
+              >Pangkat (n): <input type="number" id="bagi_n" value="2"
+            /></label>
+          </div>
+          <button onclick="hitungPembagian()">Hitung</button>
+          <div class="output" id="output_bagi">Hasil akan tampil di sini.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sifat 3: Perpangkatan</h3>
+        <p class="formula-display">
+          (a<sup>m</sup>)<sup>n</sup> = a<sup>m × n</sup>
+        </p>
+        <p>
+          Jika bilangan berpangkat dipangkatkan lagi, cukup
+          <strong>kalikan</strong> pangkatnya.
+        </p>
+        <div class="calculator">
+          <h4>Kalkulator Interaktif</h4>
+          <div class="input-group">
+            <label
+              >Basis (a): <input type="number" id="pangkat_basis" value="4"
+            /></label>
+            <label
+              >Pangkat (m): <input type="number" id="pangkat_m" value="2"
+            /></label>
+            <label
+              >Pangkat (n): <input type="number" id="pangkat_n" value="3"
+            /></label>
+          </div>
+          <button onclick="hitungPerpangkatan()">Hitung</button>
+          <div class="output" id="output_pangkat">
+            Hasil akan tampil di sini.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sifat 4: Pangkat Nol</h3>
+        <p class="formula-display">a<sup>0</sup> = 1</p>
+        <p>
+          Setiap bilangan (kecuali 0) yang dipangkatkan 0 hasilnya adalah
+          <strong>1</strong>.
+        </p>
+        <div class="calculator">
+          <h4>Kalkulator Interaktif</h4>
+          <div class="input-group">
+            <label
+              >Basis (a): <input type="number" id="nol_basis" value="7"
+            /></label>
+          </div>
+          <button onclick="hitungPangkatNol()">Hitung</button>
+          <div class="output" id="output_nol">Hasil akan tampil di sini.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sifat 5: Pangkat Negatif</h3>
+        <p class="formula-display">a<sup>-n</sup> = 1 / a<sup>n</sup></p>
+        <p>
+          Pangkat negatif artinya adalah
+          <strong>kebalikan (reciprocal)</strong> dari pangkat positifnya.
+        </p>
+        <div class="calculator">
+          <h4>Kalkulator Interaktif</h4>
+          <div class="input-group">
+            <label
+              >Basis (a): <input type="number" id="neg_basis" value="5"
+            /></label>
+            <label
+              >Pangkat (-n): <input type="number" id="neg_n" value="2"
+            /></label>
+          </div>
+          <button onclick="hitungPangkatNegatif()">Hitung</button>
+          <div class="output" id="output_neg">Hasil akan tampil di sini.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sifat 6: Pangkat Pecahan</h3>
+        <p class="formula-display">
+          a<sup>m/n</sup> = <sup>n</sup>√a<sup>m</sup>
+        </p>
+        <p>
+          Pangkat pecahan berhubungan dengan <strong>akar</strong>. Penyebut
+          menjadi indeks akar, pembilang menjadi pangkat.
+        </p>
+        <div class="calculator">
+          <h4>Kalkulator Interaktif</h4>
+          <div class="input-group">
+            <label
+              >Basis (a): <input type="number" id="pecahan_basis" value="8"
+            /></label>
+            <label
+              >Pembilang (m): <input type="number" id="pecahan_m" value="2"
+            /></label>
+            <label
+              >Penyebut (n): <input type="number" id="pecahan_n" value="3"
+            /></label>
+          </div>
+          <button onclick="hitungPangkatPecahan()">Hitung</button>
+          <div class="output" id="output_pecahan">
+            Hasil akan tampil di sini.
+          </div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="kuis.html">Latihan Soal</a>
+      </div>
+      <footer>
+        <p>Dibuat untuk pembelajaran yang lebih mudah dan interaktif.</p>
+      </footer>
+    </div>
+
+    <script src="scriptm.js"></script>
+  </body>
+</html>
